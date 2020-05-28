@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  height: 250px;
+  width: 800px;
+  border-radius: 7px;
+  background-image: linear-gradient(#724498, #a07397);
+  margin-top: 10px;
+  //flex: 0 0 50%;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  padding: 30px;
+  width: 90%;
+  //flex: 0 0 50%;
+}
+
+.location-sec {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  color: white;
+  width: 50%;
+}
+
+.time-sec {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #acb1cb;
+  width: 50%;
+}
+
+.temp-sec {
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 92px;
+  color: white;
+  width: 100%;
+}
+
+.condition-sec {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: white;
+  width: 50%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 35px;
+  flex: 0 0 15%;
+}
+
+.img-sec {
+  display: flex;
+
+  height: 3em;
+  width: 3em;
+  //   .Img {
+  //     width: 30%;
+  //   }
+}
+
+.high-low-sec {
+  display: flex;
+  color: white;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-top: 20px;
+}
+
+// choice 1 - Day
+// #724498 --- top
+
+// #A07397 --- bottom
+
+// choice 2 - Night Mode
+// #23377E --- top
+
+// #573E8B --- bottom
