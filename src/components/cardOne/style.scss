@@ -32,7 +32,7 @@
   font-weight: 600;
   line-height: 30px;
   color: white;
-  width: 50%;
+  width: 75%;
 }
 
 .time-sec {
@@ -41,14 +41,25 @@
   line-height: 27px;
   color: #acb1cb;
   width: 50%;
+  
 }
 
 .temp-sec {
+  display: flex;
+  flex-direction: row;
   font-size: 96px;
   font-weight: 500;
   line-height: 92px;
   color: white;
   width: 100%;
+ 
+}
+
+.units-sec {
+  display: flex;
+  font-size: 50px;
+ transform: translateY(16%);
+  
 }
 
 .condition-sec {
