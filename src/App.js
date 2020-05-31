@@ -3,7 +3,9 @@ import "./components/cardOne/index";
 import axios from "axios";
 
 import "./App.css";
+import InputBar from "./components/inputBar/inputBar";
 import CardOne from "./components/cardOne/index";
+import CardTwo from "./components/cardTwo/index";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -11,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cityName: "Columbus",
+      cityName: "Charleston",
       isLoading: true,
     };
   }
@@ -23,7 +25,7 @@ class App extends Component {
     axios
       .get()
       .then((res) => {
-        return (res.data);
+        return res.data;
       })
       .then((data) => {
         this.setState({
@@ -33,8 +35,17 @@ class App extends Component {
           weather_desc: data.current.weather_descriptions,
           weather_icon: data.current.weather_icons,
           time: data.location.localtime,
+          cityName: data.location.name,
           state: data.location.region,
-          country: data.location.country
+          country: data.location.country,
+          feelLikeTemp: data.current.feelslike,
+          humidity: data.current.humidity,
+          pressure: data.current.pressure,
+          vis: data.current.visibility,
+          windDir: data.current.wind_dir,
+          windSpeed: data.current.wind_speed,
+          cloudCover: data.current.cloudcover,
+          uvIndex: data.current.uv_index,
         });
       })
 
@@ -46,14 +57,9 @@ class App extends Component {
   render() {
     return (
       <div className="app-container">
-
-        <CardOne {...this.state}
-          // location={cityName}
-          // temperature={temp}
-          // is_day={isDay}
-          // weather_desc={weather_desc}
-          // weather_icon={weather_icon}
-        />
+        <InputBar />
+        <CardOne {...this.state} />
+        <CardTwo {...this.state} />
       </div>
     );
   }

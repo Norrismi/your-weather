@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.app-bucket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-bucket {
+    display: flex;
+    align-items: stretch;
+    width: 100vw;
+    flex-direction: row;
+    height: 275px;
+    width: 800px;
+    border-radius: 7px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 75px;
+
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    flex: 0 0 50%;
+    padding: 15px 15px 30px 30px;
+    //width: 45%;
+
+}
+
+.right-side2 {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    padding: 15px 30px 30px 15px;
+
+
+}
+
+.location {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 31px;
+    padding-bottom: 20px;
+}
+
+.feel-like-unit {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 56px;
+}
+
+.fl-desc {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 30px;
+}
+
+#info {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+[class*="label"] {
+
+    border-top: 0.1px solid #bbb;
+}
+
+.humidity-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.humidity-units {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}
+
+.pressure-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.pressure-units {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}
+
+
+.visibility-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.visibility-units {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}
+
+.wind-label {
+    display: flex;
+    flex-direction: row;
+    margin-top: 59px;
+}
+
+.wind-dir {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}
+
+.wind-units {
+    padding-left: 5px;
+
+}
+
+.cloud-cover-label {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cloud-cover-units {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}
+
+.uv-index-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.uv-index-units {
+    display: flex;
+    flex: 0 0 80%;
+    justify-content: flex-end;
+    flex: 1
+}

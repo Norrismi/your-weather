@@ -2,14 +2,22 @@
   box-sizing: border-box;
 }
 
+body{
+    background-image: linear-gradient(#C0A4C1, #E3C8C1);
+    width: 100%;
+    height: 100%;
+}
+
 .app-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .main-container {
   display: flex;
-  height: 250px;
+  height: 270px;
   width: 800px;
   border-radius: 7px;
   background-image: linear-gradient(#724498, #a07397);
@@ -103,6 +111,7 @@
 // #724498 --- top
 
 // #A07397 --- bottom
+
 
 // choice 2 - Night Mode
 // #23377E --- top
