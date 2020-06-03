@@ -8,6 +8,7 @@ class panelOne extends Component {
   }
 
   render() {
+ 
     const {
       cityName,
       temp,
