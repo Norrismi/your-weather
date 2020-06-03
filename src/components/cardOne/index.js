@@ -35,7 +35,9 @@ class panelOne extends Component {
           </div>
           <div className="right-side">
             <img src={weather_icon} alt="weather icon" className="img-sec" />
-            <div className="high-low-sec">???????</div>
+            {/* <div className="high-low-sec">???????</div> 
+              Slide the current left description over 
+            */}
           </div>
         </div>
       </div>

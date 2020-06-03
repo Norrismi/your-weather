@@ -8,8 +8,8 @@ class cardTwo extends Component {
   }
   render() {
     const {
-        state,
-        cityName,
+      state,
+      cityName,
       feelLikeTemp,
       humidity,
       pressure,
@@ -24,8 +24,7 @@ class cardTwo extends Component {
         <div className="main-bucket">
           <div className="leftSide">
             <div className="feel-like-unit">
-              {feelLikeTemp}°
-              <div className="fl-desc">Feels Like</div>
+              {feelLikeTemp}°<div className="fl-desc">Feels Like</div>
             </div>
             <div className="humidity-label" id="info">
               Humidity
@@ -49,7 +48,9 @@ class cardTwo extends Component {
           </div>
 
           <div className="right-side2">
-    <div className="location">Weather today in {cityName}</div>
+            <div className="location">
+              Weather today in {cityName}, {state}
+            </div>
             <div className="wind-label" id="info">
               {" "}
               Wind
@@ -71,7 +72,7 @@ class cardTwo extends Component {
             <div className="uv-index-label" id="info">
               UV Index
               <div className="uv-index-units" id="info">
-                {uvIndex} of 10
+                {uvIndex} of 15
               </div>
             </div>
           </div>
