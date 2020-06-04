@@ -22,13 +22,5 @@ const inputBar = (props) => {
   );
 };
 
-function error() {
-  return (
-    <div className="alert alert-danger" role="alert">
-      {" "}
-      Enter a city to search for the weather
-    </div>
-  );
-}
 
 export default inputBar;

@@ -18,58 +18,66 @@ class panelOne extends Component {
       state,
       country,
       error,
+      help
     } = this.props;
 
     return (
       <div className="app-container">
-      <div className="error">{!cityName  ? errorMsg() : null}</div>
+        <div className="error">{help ? helpMsg() : null}</div>
+          <div className="error">{error ? errorMsg() : null}</div>
         <div className="main-container">
           <div className="left-side">
             {cityName ? (
               <div className="location-sec">
-                {cityName}, {country}
+                {cityName}, {state}, {country}
               </div>
             ) : null}
 
-            {cityName ? (
-              <div className="time-sec">as of {this.handleTime} pm EST</div>
-            ) : null}
-
-            {temp ? (
-              <div className="temp-sec">
-                {temp}°<div className="units-sec">F</div>
-              </div>
-            ) : null}
-
-            <div className="condition-sec">{weather_desc}</div>
+            {cityName ? <div className="time-sec">as of {} pm EST</div> : null}
+            <div className="temp-master">
+              {temp ? (
+                <div className="temp-sec">
+                  {temp}°<div className="units-sec">F</div>
+                </div>
+              ) : null}
+            </div>
           </div>
           <div className="right-side">
             {cityName ? (
               <img src={weather_icon} alt="weather icon" className="img-sec" />
             ) : null}
-            {/* <div className="high-low-sec">???????</div> 
-              Slide the current left description over 
-            */}
+            <div className="condition-sec">{weather_desc}</div>
+         
           </div>
         </div>
       </div>
     );
   }
-  // handleTime = (time)  => {
-  //   const {time} = this.props
-  //   console.log(time)
-  //   let whatTime = time.split(" ").slice(1).toString();
-  //   let hour = whatTime.substring(0, 2);
-  //   let min = whatTime.substring(3, 5);
-  //   return (hour > 12) ? `${hour - 12}:${min}` : `${hour}:${min}`;
-  // }
 }
+
+//  function handleTime(time)  {
+//     //const {time} = this.props
+//     console.log(time)
+//     // let whatTime = time.split(" ").slice(1).toString();
+//     // let hour = whatTime.substring(0, 2);
+//     // let min = whatTime.substring(3, 5);
+//     // return (hour > 12) ? `${hour - 12}:${min}` : `${hour}:${min}`;
+//   }
 
 function errorMsg() {
   return (
     <div className="alert alert-danger" role="alert">
       {" "}
-      Enter a city to search for the weather
+      Enter a City to search for the weather.
+    </div>
+  );
+}
+
+function helpMsg() {
+  return (
+    <div className="alert alert-success" role="alert">
+      {" "}
+      Enter a City to search for the weather.
     </div>
   );
 }

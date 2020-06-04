@@ -45,6 +45,8 @@
 }
 
 .location {
+    display: flex;
+    justify-content: flex-end;
     font-size: 21px;
     font-weight: 500;
     line-height: 31px;
@@ -112,7 +114,16 @@
     flex: 1
 }
 
+.right-units{
+    position: absolute;
+
+    width: 355px;
+    top: 442px;
+    
+}
+
 .wind-label {
+    
     display: flex;
     flex-direction: row;
     margin-top: 59px;

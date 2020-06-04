@@ -49,8 +49,11 @@ class cardTwo extends Component {
 
           <div className="right-side2">
             <div className="location">
-              Weather today in {cityName}, {state}
+              Weather today in {cityName}
             </div>
+
+            <div className="right-units">
+
             <div className="wind-label" id="info">
               {" "}
               Wind
@@ -74,6 +77,9 @@ class cardTwo extends Component {
               <div className="uv-index-units" id="info">
                 {uvIndex} of 15
               </div>
+            </div>
+
+            
             </div>
           </div>
         </div>

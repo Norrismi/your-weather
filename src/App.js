@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./components/cardOne/index";
 
 import "./App.css";
-import store from "./store";
 import InputBar from "./components/inputBar/inputBar";
 import CardOne from "./components/cardOne/index";
 import CardTwo from "./components/cardTwo/index";
@@ -14,65 +13,53 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cityName: '',
+      cityName: "",
       error: false,
-      isLoading: true,
-      locationName: "",
-      
+      help: true
     };
   }
 
   getWeather = async (e) => {
     e.preventDefault();
 
+    const { error } = this.state;
     const city = e.target.elements.city.value;
 
-if (city){
+    if (city) {
+      const apiCall = await fetch(
+        `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
+      );
 
-  const apiCall = await fetch(
-    `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
-  );
-  
-  const data = await apiCall.json();
-  console.log(data);
+      const data = await apiCall.json();
+      //console.log(data.error.info);
 
-
-  this.setState({
-    isLoading: false,
-    temp: data.current.temperature,
-    isDay: data.current.is_day,
-    weather_desc: data.current.weather_descriptions,
-    weather_icon: data.current.weather_icons,
-    time: data.location.localtime,
-    cityName: data.location.name,
-    state: data.location.region,
-    country: data.location.country,
-    feelLikeTemp: data.current.feelslike,
-    humidity: data.current.humidity,
-    pressure: data.current.pressure,
-    vis: data.current.visibility,
-    windDir: data.current.wind_dir,
-    windSpeed: data.current.wind_speed,
-    cloudCover: data.current.cloudcover,
-    uvIndex: data.current.uv_index,
-  });
-
-}else{
-  this.setState({error: true})
-}
-
-
-
-};
-
-
-  // componentDidMount() {
-  //   setState({cityName: ''})
-  // }
-
+      this.setState({
+        temp: data.current.temperature,
+        isDay: data.current.is_day,
+        weather_desc: data.current.weather_descriptions,
+        weather_icon: data.current.weather_icons,
+        time: data.location.localtime,
+        cityName: data.location.name,
+        state: data.location.region,
+        country: data.location.country,
+        feelLikeTemp: data.current.feelslike,
+        humidity: data.current.humidity,
+        pressure: data.current.pressure,
+        vis: data.current.visibility,
+        windDir: data.current.wind_dir,
+        windSpeed: data.current.wind_speed,
+        cloudCover: data.current.cloudcover,
+        uvIndex: data.current.uv_index,
+        error: false,
+        help: false
+      });
+    } else {
+      this.setState({ error: true });
+    }
+  };
 
   render() {
-    console.log(this.state.cityName);
+
     return (
       <div className="app-container">
         <InputBar loadweather={this.getWeather} />
