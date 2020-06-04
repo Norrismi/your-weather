@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import "./style.scss";
 
 class cardTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+
   render() {
     const {
       state,
@@ -20,8 +17,11 @@ class cardTwo extends Component {
       uvIndex,
     } = this.props;
     return (
+
+      cityName? 
       <div className="app-bucket">
         <div className="main-bucket">
+       
           <div className="leftSide">
             <div className="feel-like-unit">
               {feelLikeTemp}°<div className="fl-desc">Feels Like</div>
@@ -78,6 +78,7 @@ class cardTwo extends Component {
           </div>
         </div>
       </div>
+      : null
     );
   }
 }
