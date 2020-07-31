@@ -1,11 +1,6 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
   background-image: linear-gradient(#C0A4C1, #E3C8C1);
-  width: 100%;
-  height: 100%;
 }
 
 .app-container {
@@ -22,7 +17,7 @@ body {
   border-radius: 7px;
   background-image: linear-gradient(#724498, #a07397);
   margin-top: 10px;
-  //flex: 0 0 50%;
+  
 }
 
 .error {
@@ -37,7 +32,7 @@ body {
   font-family: "Segoe UI", Roboto, sans-serif;
   padding: 30px;
   width: 55%;
-  //flex: 0 0 50%;
+  
 }
 
 .location-sec {
@@ -53,27 +48,22 @@ body {
   font-weight: 400;
   line-height: 27px;
   color: #acb1cb;
-  width: 50%;
+  width: 60%;
 
 }
 
 .temp-master{
-
-  position: absolute;
   width: 1000px;
   top: 180px;
 }
 
 .temp-sec {
-
   display: flex;
   flex-direction: row;
   font-size: 96px;
   font-weight: 500;
   line-height: 148px;
   color: white;
-  width: 100%;
-
 }
 
 .units-sec {
@@ -88,7 +78,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   color: white;
-  //width: 50%;
+  
 }
 
 .right-side {
@@ -107,23 +97,3 @@ body {
 
 }
 
-.high-low-sec {
-  display: flex;
-  color: white;
-  font-family: "Segoe UI", Roboto, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 36px;
-  padding-top: 20px;
-}
-
-// choice 1 - Day
-// #724498 --- top
-
-// #A07397 --- bottom
-
-
-// choice 2 - Night Mode
-// #23377E --- top
-
-// #573E8B --- bottom

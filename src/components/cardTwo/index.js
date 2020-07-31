@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import "./style.scss";
 
 class cardTwo extends Component {
-
   render() {
     const {
-      state,
       cityName,
       feelLikeTemp,
       humidity,
@@ -16,12 +14,9 @@ class cardTwo extends Component {
       cloudCover,
       uvIndex,
     } = this.props;
-    return (
-
-      cityName? 
+    return cityName ? (
       <div className="app-bucket">
         <div className="main-bucket">
-       
           <div className="leftSide">
             <div className="feel-like-unit">
               {feelLikeTemp}°<div className="fl-desc">Feels Like</div>
@@ -48,44 +43,38 @@ class cardTwo extends Component {
           </div>
 
           <div className="right-side2">
-            <div className="location">
-              Weather today in {cityName}
-            </div>
+            <div className="location">Weather today in {cityName}</div>
 
             <div className="right-units">
-
-            <div className="wind-label" id="info">
-              {" "}
-              Wind
-              <div className="wind-dir" id="info">
-                {windDir}
-                <div className="wind-units" id="info">
-                  {" "}
-                  {windSpeed} mph
+              <div className="wind-label" id="info">
+                {" "}
+                Wind
+                <div className="wind-dir" id="info">
+                  {windDir}
+                  <div className="wind-units" id="info">
+                    {" "}
+                    {windSpeed} mph
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="cloud-cover-label" id="info">
-              Cloud Coverage
-              <div className="cloud-cover-units" id="info">
-                {cloudCover}%
+              <div className="cloud-cover-label" id="info">
+                Cloud Coverage
+                <div className="cloud-cover-units" id="info">
+                  {cloudCover}%
+                </div>
               </div>
-            </div>
-            <div className="uv-index-label" id="info">
-              UV Index
-              <div className="uv-index-units" id="info">
-                {uvIndex} of 15
+              <div className="uv-index-label" id="info">
+                UV Index
+                <div className="uv-index-units" id="info">
+                  {uvIndex} of 15
+                </div>
               </div>
-            </div>
-
-            
             </div>
           </div>
         </div>
       </div>
-      : null
-    );
+    ) : null;
   }
 }
 

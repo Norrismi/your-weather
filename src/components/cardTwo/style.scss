@@ -1,15 +1,7 @@
-* {
-    box-sizing: border-box;
 
-}
 
-.app-bucket {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
+// on cell view delete most of this
 .main-bucket {
     display: flex;
     align-items: stretch;
@@ -20,8 +12,7 @@
     border-radius: 7px;
     background-color: white;
     margin-top: 10px;
-    margin-bottom: 75px;
-
+    margin-bottom: 136px;
 }
 
 .leftSide {
@@ -30,7 +21,7 @@
     font-family: "Segoe UI", Roboto, sans-serif;
     flex: 0 0 50%;
     padding: 15px 15px 30px 30px;
-    //width: 45%;
+  
 
 }
 
@@ -40,8 +31,6 @@
     flex-direction: column;
     font-family: "Segoe UI", Roboto, sans-serif;
     padding: 15px 30px 30px 15px;
-
-
 }
 
 .location {
@@ -114,13 +103,6 @@
     flex: 1
 }
 
-.right-units{
-    position: absolute;
-
-    width: 355px;
-    top: 442px;
-    
-}
 
 .wind-label {
     
@@ -165,3 +147,9 @@
     justify-content: flex-end;
     flex: 1
 }
+
+@media only screen and (max-width: 480px) {
+    .app-bucket {
+      background-color: lightblue;
+    }
+  }

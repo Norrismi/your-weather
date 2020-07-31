@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style.scss";
+import moment from 'moment'
 
 class panelOne extends Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class panelOne extends Component {
       help
     } = this.props;
 
+console.log(Date.now())
+
     return (
       <div className="app-container">
         <div className="error">{help ? helpMsg() : null}</div>
@@ -33,7 +36,7 @@ class panelOne extends Component {
               </div>
             ) : null}
 
-            {cityName ? <div className="time-sec">as of {} pm EST</div> : null}
+            {cityName ? <div className="time-sec">{moment(Date.now()).format('LLL')} </div> : null}
             <div className="temp-master">
               {temp ? (
                 <div className="temp-sec">
