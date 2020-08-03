@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./style.scss";
-import moment from 'moment'
+import moment from "moment";
 
 class panelOne extends Component {
   constructor(props) {
@@ -19,24 +19,31 @@ class panelOne extends Component {
       state,
       country,
       error,
-      help
+      help,
     } = this.props;
-
-console.log(Date.now())
 
     return (
       <div className="app-container">
         <div className="error">{help ? helpMsg() : null}</div>
-          <div className="error">{error ? errorMsg() : null}</div>
+        <div className="error">{error ? errorMsg() : null}</div>
         <div className="main-container">
           <div className="left-side">
             {cityName ? (
-              <div className="location-sec">
-                {cityName}, {state}, {country}
+              <div>
+                <div className="location-sec">
+                  {cityName}, {state}, {country}
+                </div>
+                <div className="cell-location-sec">
+                  {cityName}, {state}
+                </div>
               </div>
             ) : null}
 
-            {cityName ? <div className="time-sec">{moment(Date.now()).format('LLL')} </div> : null}
+            {cityName ? (
+              <div className="time-sec">
+                {moment(Date.now()).format("LLL")}{" "}
+              </div>
+            ) : null}
             <div className="temp-master">
               {temp ? (
                 <div className="temp-sec">
@@ -50,22 +57,12 @@ console.log(Date.now())
               <img src={weather_icon} alt="weather icon" className="img-sec" />
             ) : null}
             <div className="condition-sec">{weather_desc}</div>
-         
           </div>
         </div>
       </div>
     );
   }
 }
-
-//  function handleTime(time)  {
-//     //const {time} = this.props
-//     console.log(time)
-//     // let whatTime = time.split(" ").slice(1).toString();
-//     // let hour = whatTime.substring(0, 2);
-//     // let min = whatTime.substring(3, 5);
-//     // return (hour > 12) ? `${hour - 12}:${min}` : `${hour}:${min}`;
-//   }
 
 function errorMsg() {
   return (

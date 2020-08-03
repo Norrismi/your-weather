@@ -14,10 +14,11 @@ class cardTwo extends Component {
       cloudCover,
       uvIndex,
     } = this.props;
-    return cityName ? (
+    return (
       <div className="app-bucket">
         <div className="main-bucket">
           <div className="leftSide">
+            <div className="location-cell">Weather Today in {cityName}</div>
             <div className="feel-like-unit">
               {feelLikeTemp}°<div className="fl-desc">Feels Like</div>
             </div>
@@ -74,7 +75,7 @@ class cardTwo extends Component {
           </div>
         </div>
       </div>
-    ) : null;
+    );
   }
 }
 
