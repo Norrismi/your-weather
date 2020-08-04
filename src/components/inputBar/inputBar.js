@@ -1,25 +1,51 @@
-import React from "react";
+import React, {Component} from "react";
 import "./style.scss";
 
-const inputBar = (props) => {
+class inputBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cityName: ''
+    };
+  }
+  
+  handleChange =(e)=>{
+    e.preventDefault()
+    this.setState({ cityName: e.target.value }); 
+  } 
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.setState({ cityName:'' })
+  }
+
+
+  render(){
+  
   return (
-      // <div>{props.error?  error(): null }</div>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-      <a className="navbar-brand">Your Weather</a>
-      <form className="form-inline" onSubmit={props.loadweather}>
+    // <div>{props.error?  error(): null }</div>
+    <nav role="navigation" className="navbar navbar-light bg-light  ">
+      <a href='# ' className="navbar-brand d-none d-md-block ">Your Weather</a>
+      <form className="form-inline" onSubmit={ 
+        this.props.handleSubmit
+      
+        }>
         <input
           className="form-control mr-sm-2"
           type="text"
-          placeholder="City, State"
+          placeholder="City Name"
           aria-label="Search"
-          name="city"
-        />
-        <button className="btn  my-2 my-sm-0" type="submit">
+          name='city'
+          value={this.state.cityName}
+         onChange={this.handleChange}
+          />
+        <button className="btn btn-sm  my-2 my-sm-0" type="submit"  >
           Search
         </button>
       </form>
     </nav>
   );
+}
 };
 
 

@@ -5,3 +5,17 @@
 .btn {
   color: #6f3f98 !important;
 }
+
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    justify-content: center !important;
+  }
+
+  .form-control {
+    width: 150px !important;
+  }
+
+}

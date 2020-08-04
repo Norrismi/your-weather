@@ -5,22 +5,25 @@ import moment from "moment";
 class panelOne extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      cityName: 'LA'
+    };
   }
 
   render() {
     const {
       cityName,
       temp,
-      isDay,
       weather_desc,
       weather_icon,
-      time,
       state,
       country,
       error,
       help,
     } = this.props;
+
+    
+
 
     return (
       <div className="app-container">

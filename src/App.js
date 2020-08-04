@@ -15,14 +15,15 @@ class App extends Component {
     this.state = {
       cityName: "",
       error: false,
-      help: true
+      help: true,
     };
   }
 
   getWeather = async (e) => {
     e.preventDefault();
+    
 
-    const { error } = this.state;
+    
     const city = e.target.elements.city.value;
 
     if (city) {
@@ -31,13 +32,12 @@ class App extends Component {
       );
 
       const data = await apiCall.json();
+    
 
       this.setState({
         temp: data.current.temperature,
-        isDay: data.current.is_day,
         weather_desc: data.current.weather_descriptions,
         weather_icon: data.current.weather_icons,
-        time: data.location.localtime,
         cityName: data.location.name,
         state: data.location.region,
         country: data.location.country,
@@ -50,18 +50,22 @@ class App extends Component {
         cloudCover: data.current.cloudcover,
         uvIndex: data.current.uv_index,
         error: false,
-        help: false
+        help: false,
       });
     } else {
-      this.setState({ error: true });
+      
     }
   };
 
+
+
+  
   render() {
+   
 
     return (
       <div className="app-container">
-        <InputBar loadweather={this.getWeather} />
+        <InputBar handleSubmit={this.getWeather} />
         <CardOne {...this.state} />
         <CardTwo {...this.state} />
       </div>
