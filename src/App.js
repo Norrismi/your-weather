@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./components/cardOne/index";
-
 import "./App.css";
 import InputBar from "./components/inputBar/inputBar";
 import CardOne from "./components/cardOne/index";
@@ -22,7 +21,7 @@ class App extends Component {
   getWeather = async (e) => {
     e.preventDefault();
 
-    const { error } = this.state;
+    //const { error } = this.state;
     const city = e.target.elements.city.value;
 
     if (city) {

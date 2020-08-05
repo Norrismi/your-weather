@@ -17,7 +17,7 @@ class inputBar extends Component {
   render() {
     return (
      // <div>{props.error?  error(): null }</div>
-      <nav role="navigation" className="navbar navbar-light bg-light  ">
+      <nav role="navigation" className="navbar navbar-light bg-light container-fullwidth  ">
         <a href="# " className="navbar-brand d-none d-md-block ">
           Your Weather
         </a>

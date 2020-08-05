@@ -1,4 +1,4 @@
-// on cell view delete most of this
+
 .main-bucket {
     display: flex;
     align-items: stretch;
@@ -30,7 +30,7 @@
     padding: 15px 30px 30px 15px;
 }
 
-.cell-location {
+.location-cell {
     display: none;
 }
 
@@ -149,7 +149,7 @@
     flex: 1
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .main-bucket {
         display: flex;
         flex-direction: column;
