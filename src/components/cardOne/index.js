@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./style.scss";
-import moment from "moment";
+import momentTimezone from "moment-timezone";
 
 class panelOne extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cityName: 'LA'
+      cityName: '',
+      error: ''
     };
   }
 
@@ -44,7 +45,7 @@ class panelOne extends Component {
 
             {cityName ? (
               <div className="time-sec">
-                {moment(Date.now()).format("LLL")}{" "}
+                {momentTimezone(Date.now()).format("LL")} {" "}
               </div>
             ) : null}
             <div className="temp-master">

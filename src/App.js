@@ -21,9 +21,8 @@ class App extends Component {
 
   getWeather = async (e) => {
     e.preventDefault();
-    
 
-    
+    const { error } = this.state;
     const city = e.target.elements.city.value;
 
     if (city) {
@@ -32,7 +31,6 @@ class App extends Component {
       );
 
       const data = await apiCall.json();
-    
 
       this.setState({
         temp: data.current.temperature,
@@ -53,19 +51,14 @@ class App extends Component {
         help: false,
       });
     } else {
-      
+      this.setState({error: true})
     }
   };
 
-
-
-  
   render() {
-   
-
     return (
       <div className="app-container">
-        <InputBar handleSubmit={this.getWeather} />
+        <InputBar getCity={this.getWeather} />
         <CardOne {...this.state} />
         <CardTwo {...this.state} />
       </div>
