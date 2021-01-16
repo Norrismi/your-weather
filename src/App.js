@@ -8,20 +8,18 @@ import CardTwo from "./components/cardTwo/index";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      cityName: "",
-      error: false,
-      help: true,
-    };
-  }
+  state = {
+    cityName: "",
+    error: false,
+    help: true,
+  };
+
 
   getWeather = async (e) => {
     e.preventDefault();
 
-    //const { error } = this.state;
+ 
     const city = e.target.elements.city.value;
 
     if (city) {
@@ -50,7 +48,7 @@ class App extends Component {
         help: false,
       });
     } else {
-      this.setState({error: true})
+      this.setState({ error: true })
     }
   };
 

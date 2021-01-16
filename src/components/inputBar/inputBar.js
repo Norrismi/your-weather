@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import "./style.scss";
 
 class inputBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cityName: "",
-    };
-  }
+
+  state = {
+    cityName: "",
+  };
+
 
   handleChange = (e) => {
     e.preventDefault();
@@ -16,7 +15,6 @@ class inputBar extends Component {
 
   render() {
     return (
-     // <div>{props.error?  error(): null }</div>
       <nav role="navigation" className="navbar navbar-light bg-light container-fullwidth  ">
         <a href="# " className="navbar-brand d-none d-md-block ">
           Your Weather
