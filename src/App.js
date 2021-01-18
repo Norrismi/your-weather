@@ -24,7 +24,7 @@ class App extends Component {
 
     if (city) {
       const apiCall = await fetch(
-        `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
+        `https://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
       );
 
       const data = await apiCall.json();
