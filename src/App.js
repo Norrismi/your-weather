@@ -19,15 +19,17 @@ class App extends Component {
   getWeather = async (e) => {
     e.preventDefault();
 
- 
+
+
     const city = e.target.elements.city.value;
 
     if (city) {
       const apiCall = await fetch(
-        `https://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
+        `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}&units=f`
       );
 
       const data = await apiCall.json();
+      console.log(data)
 
       this.setState({
         temp: data.current.temperature,
