@@ -29,7 +29,6 @@ class App extends Component {
       );
 
       const data = await apiCall.json();
-      console.log(data)
 
       this.setState({
         temp: data.current.temperature,
