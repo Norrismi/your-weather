@@ -22,7 +22,7 @@ Live at domain address: http://your-weather7.herokuapp.com/<br />
 
 This is one of the first react applications I built. Of course, at the time, fetching the API was something new for me to master. Another challenge was the css design. I was inspired to use a design very close to the design of The Weather Channel's website. Using the free weatherstack API, I was only provided with a handful of data stats. I had to pick the stats I wanted while trying to match the design of The Weather Channel's website. For a simple application, I am pleased with the way it turned out. One of my favorite parts was working with and seeing the results of the CSS gradients.  <br />
 
-This application is live (see address above), while working with Heroku hosting, I was stumbled on why the application appeared broken when using https. After googling and reading the weatherstack documentation, I found the free Weatherstack API only was available on http. From this I learnt it helps to keep a level head and think logically through the steps of action.  <br />
+This application is live (see address above), while working with Heroku hosting, I was perplexed as to why the application appeared broken when using https. After googling and reading the weatherstack documentation, I found the free Weatherstack API only was available on http. From this I learnt it always helps to keep a level head and think logically through the steps of action.  <br />
 
 
 
